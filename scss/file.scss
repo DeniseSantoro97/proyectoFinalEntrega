@@ -1,0 +1,1565 @@
+@import "variables";
+// FOR ALL START //
+
+* {
+    box-sizing: border-box;
+}
+
+h1 { font-size: 3em;
+    font-family: $font-primary;
+    font-weight: bold;}
+h2 { font-size: 2.5em;
+    font-family: $font-primary;
+    font-weight: bold;}
+h3 { font-size: 2em;
+    font-family: $font-primary;
+    font-weight: bold;}
+h4 { font-size: 2em;
+    font-family: $font-primary;
+    font-weight: bold;}
+ul { list-style: none;}
+
+body {
+    background-color: #eed3d3;
+    background-image: url("../media/fondoFlores.png");
+    background-size: 35px;
+}
+
+.my-navbar{
+    background-color: #b88cae;
+
+    .nav-link{
+        padding: 5px 12px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #ffffff;
+        font-family: map-get($genericValues, genericFont);
+    
+            @each $hover in $hoverColours {
+                &:hover {
+                
+                color: $hover; 
+                
+                }
+            
+            } 
+        }
+}
+
+#first-footer{
+
+    .img-logo {
+        height: 30px;
+    }
+
+    a{
+        padding: 20px;
+
+        img{
+            height: 20px;
+        }
+    }
+
+}
+
+button {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid #b86969;
+    box-shadow: 2px 2px 10px #b86969;
+    color:aliceblue;
+    background-color: #b88cae;
+
+}
+
+@media (min-width: 546px) {
+    .my-rowFooterLowRes{
+        display: none;
+    }
+}
+
+@media (max-width: 545px) {
+
+    .my-rowFooterHighRes{
+        display: none;
+    }
+
+    .my-rowFooterLowRes{
+        ul{
+            padding-top: 20px;
+                li{
+                    width: max-content;
+                }
+        }    
+
+    }
+
+}
+
+@media (min-width: 992px) {
+    .my-navBarToggle{
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    p{color: #ffffff;}
+}
+
+//FOR ALL END //
+
+// INDEX START //
+
+ #nuestros-box{
+     background-color: #c2aabc;
+
+     #row-nuestrobox-highres{
+        padding: 13px;
+     }
+
+    .cartas1{
+        background-position: center center;
+        background-size: cover;
+        text-align: center;
+        border-radius: 10px;
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.3),
+            rgba(0,0,0,0.3)
+        )
+        ,url("../media/pinterest1.jpg");
+
+        p{
+            color: #ffffff;
+        }
+    }
+    
+    .cartas2{
+        background-position: center center;
+        background-size: cover;
+        text-align: center;
+        border-radius: 10px;
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.3),
+            rgba(0,0,0,0.3)
+        )
+        ,url("../media/pinterest2.jpg");
+
+            p{
+                color: #ffffff;
+            }
+    }
+    
+    .cartas3{
+        background-position: center center;
+        background-size: cover;
+        text-align: center;
+        border-radius: 10px;
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.3),
+            rgba(0,0,0,0.3)
+        )
+        ,url("../media/pinterest3.jpg");
+
+        p{
+            color: #ffffff;
+        }
+    }
+
+ }
+
+ #reserva-ahora {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #b88cae;
+    color: #ffffff;
+    height: 20vh;
+}
+
+/* INDEX BST START */
+
+@mixin indexBts ($bkgrcl) {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid #b86969;
+    box-shadow: 2px 2px 10px #b86969;
+    color:aliceblue;
+    background-color: $bkgrcl;
+}
+
+.btDrop1{
+    @include indexBts ($color-primary);
+}
+
+#btsDropSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #efc8e6;
+    color: #ffffff;
+}
+
+#btsDpMenu{
+    @include indexBts (#f3f8cc);
+}
+
+.pagination{
+    padding-top: 30px;
+        .page-link{
+            font-size: 1em;
+            font-weight: bold;
+            border: 2px solid #b86969;
+            color: aliceblue;
+            background-color: $color-primary;
+        }
+} 
+
+ @media (min-width: 992px) {
+
+     .container-somostapitasHighRes{
+         padding: 30px;
+
+         .img-containerHighRes {
+            background-image:linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.13),
+                rgba(0, 0, 0, 0.089) 
+            ), url("../media/macarons5.jpg");
+            background-size: cover;
+            background-position: center center;
+            height: 300px;
+            width: 410px;
+            border-radius: 10px;
+         }
+     }
+
+     .container-somostapitasLowRes{
+        display: none;
+
+        .img-containerLowRes {
+            display: none;
+        }
+    }
+
+    #row-nuestrobox-lowres1{
+        display: none;
+
+        .cartasLowRes1 {
+            display: none;
+        }
+
+    }
+
+    #row-nuestrobox-lowres2{
+        display: none;
+
+        .cartasLowRes2 {
+            display: none;
+        }
+
+    }
+
+    #row-nuestrobox-lowres3{
+        display: none;
+
+        .cartasLowRes3 {
+            display: none;
+        }
+
+    }
+
+    .row-smstptHigh{
+        padding: 30px 145px 20px 0px;
+    
+         .img-container-smstpt {
+            background-image:linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.13),
+                rgba(0, 0, 0, 0.089) 
+            ), url("../media/macarons4.jpg");
+            background-size: cover;
+            background-position: center center;
+            height: 250px;
+            width: 350px;
+            border-radius: 10px;
+        }
+    
+        li{
+            width: max-content;
+        }
+     }
+
+     .row-smstptLow{
+        display: none;
+        
+         .img-container-smstptLow {
+            display: none;
+        }
+
+        h3{
+            display: none;
+        }
+    
+        li{
+            display: none;
+        }
+     }
+
+     .row-btsDropSectionLowRes{
+        display: none;
+     }
+
+ }
+
+@media (max-width: 991px) {
+
+    .container-somostapitasLowRes{
+        padding: 30px;
+
+        .row-somostapitasLowRes{
+
+            .img-containerLowRes {
+            background-image:linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.30),
+                rgba(0, 0, 0, 0.3) 
+            ), url("../media/macarons5.jpg");
+            background-size: cover;
+            background-position: center center;
+            height: 300px;
+            width: 410px;
+            border-radius: 10px;
+
+                p{
+                    padding: 50px;
+                }
+            }
+        }
+    }
+
+    .smtp-text{
+        display: none;
+    }
+
+    #nuestros-box{
+        background-color: #c2aabc;
+   
+        #row-nuestrobox-highres{
+            display: none;
+        }
+       
+       .cartas1{
+        display: none;
+       }
+       
+       .cartas2{
+        display: none;
+       }
+       
+       .cartas3{
+        display: none;
+       }
+
+       #row-nuestrobox-lowres1{
+        padding: 13px;
+     }
+
+       
+
+    #row-nuestrobox-lowres1{
+        padding: 13px;
+
+        .cartasLowRes1{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0,0,0,0.3),
+                rgba(0,0,0,0.3)
+            )
+            ,url("../media/pinterest1.jpg");
+        }
+
+    }
+
+    #row-nuestrobox-lowres2{
+        padding: 13px;
+
+        .cartasLowRes2{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.3),
+                rgba(0,0,0,0.3)
+            )
+            ,url("../media/pinterest2.jpg");
+        }
+
+    }
+
+    #row-nuestrobox-lowres3{
+        padding: 13px;
+
+        .cartasLowRes3{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.3),
+                rgba(0,0,0,0.3)
+            )
+            ,url("../media/pinterest3.jpg");
+         }
+
+        }
+    }
+
+    .row-smstptHigh{
+        display: none;
+    
+         .img-container-smstpt {
+            display: none;
+        }
+
+        h3{
+            display: none;
+        }
+    
+        li{
+            display: none;
+        }
+     }
+
+     .row-smstptLow{
+        padding: 30px 15px 20px 0px;
+    
+         .img-container-smstptLow {
+            background-image:linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.3),
+                rgba(0, 0, 0, 0.3) 
+            ), url("../media/macarons4.jpg");
+            background-size: cover;
+            background-position: center center;
+            height: 250px;
+            width: 350px;
+            border-radius: 10px;
+        }
+    
+        li{
+            width: max-content;
+            color: #ffffff;
+        }
+     }
+
+     .row-btsDropSectionHighRes{
+        display: none;
+     }
+}
+
+@media (min-width: 820px) {
+
+    #hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        height: 90vh;
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.274),
+            rgba(0, 0, 0, 0.233)
+        )
+        ,url("../media/macarons3.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    
+
+}
+
+@media (max-width: 819px) {
+
+    #hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        height: 50vh;
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.274),
+            rgba(0, 0, 0, 0.233)
+        )
+        ,url("../media/macarons3.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        h1{
+            padding-top: 75px;
+        }
+    }
+    
+
+}
+
+// INDEX END //
+
+// SABORES START //
+
+@mixin tasteBts {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #efc8e6;
+    color: #ffffff;
+}
+
+#btsTableSection {
+    @include tasteBts;
+}
+
+#btsTableSection p{
+    font-size: map-get($genericValues, genericFontSize);
+    font-family: map-get($genericValues, genericFont);
+}
+
+
+
+@media (min-width: 992px) {
+
+    #nuestros-box-nobanner{
+        background-color: #c2aabc;
+        padding-top: 120px;
+
+        .catalogo1{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor1.jpg");
+            height: 150px;
+
+        }
+
+        .catalogo2{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor2.jpg");
+            height: 150px;
+
+            
+        }
+
+        .catalogo3{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor3.jpg");
+            height: 150px;
+
+        }
+
+        .catalogo4{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor4.jpg");
+            height: 150px;
+
+        }
+
+        .catalogo5{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor5.jpg");
+            height: 150px;
+
+            
+        }
+
+        .catalogo6{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor6.jpg");
+            height: 150px;
+
+        }
+
+        p{
+            text-align: center;
+        }
+        
+
+    }
+
+}
+
+@media (min-width: 766px) {
+
+    #nuestros-box-nobanner{
+        background-color: #c2aabc;
+        padding-top: 120px;
+
+        .catalogo1{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor1.jpg");
+            height: 150px;
+
+        }
+
+        .catalogo2{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor2.jpg");
+            height: 150px;
+
+            
+        }
+
+        .catalogo3{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor3.jpg");
+            height: 150px;
+
+        }
+
+        .catalogo4{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor4.jpg");
+            height: 150px;
+
+        }
+
+        .catalogo5{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor5.jpg");
+            height: 150px;
+
+            
+        }
+
+        .catalogo6{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor6.jpg");
+            height: 150px;
+
+        }
+
+        p{
+            text-align: center;
+        }
+        
+
+    }
+
+}
+
+@media (max-width: 765px) {
+
+    #nuestros-box-nobanner{
+        background-color: #c2aabc;
+        padding-top: 120px;
+
+        .catalogo1{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor1.jpg");
+            height: 95px;
+
+        }
+
+        .catalogo2{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor2.jpg");
+            height: 95px;
+
+            
+        }
+
+        .catalogo3{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor3.jpg");
+            height: 95px;
+
+        }
+
+        .catalogo4{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor4.jpg");
+            height: 95px;
+
+        }
+
+        .catalogo5{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor5.jpg");
+            height: 95px;
+
+            
+        }
+
+        .catalogo6{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor6.jpg");
+            height: 95px    ;
+
+        }
+
+        p{
+            text-align: center;
+        }
+        
+
+    }
+}
+
+@media (max-width: 435px) {
+
+    #nuestros-box-nobanner{
+        background-color: #c2aabc;
+        padding-top: 120px;
+
+        .catalogo1{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor1.jpg");
+            height: 60px;
+
+        }
+
+        .catalogo2{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor2.jpg");
+            height: 60px;
+
+            
+        }
+
+        .catalogo3{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor3.jpg");
+            height: 60px;
+
+        }
+
+        .catalogo4{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor4.jpg");
+            height: 60px;
+
+        }
+
+        .catalogo5{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor5.jpg");
+            height: 60px;
+
+            
+        }
+
+        .catalogo6{
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            border-radius: 10px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.205),
+                rgba(0,0,0,0.205)
+            )
+            ,url("../media/sabor6.jpg");
+            height: 60px    ;
+
+        }
+
+        p{
+            text-align: center;
+        }
+        
+
+    }
+}
+
+
+// SABORES END //
+
+// PRODUCTOS START //
+
+#boxescarousel {
+    display: flex;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+    margin: 0 auto 0 auto;
+    height: fit-content;
+  }
+
+  #carousel::-webkit-scrollbar {
+    display: none; 
+    overflow-x: auto;
+  }
+  
+  .item {
+    min-width: 300px;
+    min-height: 20vh;
+    margin: 15px;
+    text-align: center;
+    border-radius: 7px;
+  }
+
+  #nuestros-box-nobanner .catalogoCarousel {
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 15px;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.catalogoCarousel:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.205),
+        rgba(0,0,0,0.205)
+    )
+    ,url("../media/scroll1.jpg");
+}
+
+.catalogoCarousel:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.205),
+        rgba(0,0,0,0.205)
+    )
+    ,url("../media/scroll2.jpg");
+}
+
+.catalogoCarousel:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.205),
+        rgba(0,0,0,0.205)
+    )
+    ,url("../media/scroll3.jpg");
+}
+
+.catalogoCarousel:nth-child(4){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.205),
+        rgba(0,0,0,0.205)
+    )
+    ,url("../media/scroll4.jpg");
+}
+
+.catalogoCarousel:nth-child(5){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.205),
+        rgba(0,0,0,0.205)
+    )
+    ,url("../media/scroll5.jpg");
+}
+
+.catalogoCarousel:nth-child(6){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.205),
+        rgba(0,0,0,0.205)
+    )
+    ,url("../media/scroll6.jpg");
+}
+
+.catalogoCarousel:nth-child(7){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.205),
+        rgba(0,0,0,0.205)
+    )
+    ,url("../media/scroll7.jpg");
+}
+
+.catalogoCarousel:nth-child(8){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.205),
+        rgba(0,0,0,0.205)
+    )
+    ,url("../media/scroll8.jpg");
+}
+
+.catalogoCarousel:nth-child(9){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.205),
+        rgba(0,0,0,0.205)
+    )
+    ,url("../media/scroll1.jpg");
+}
+
+.catalogoCarousel:nth-child(10){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.205),
+        rgba(0,0,0,0.205)
+    )
+    ,url("../media/scroll2.jpg");
+}
+
+.catalogoCarousel:nth-child(11){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.205),
+        rgba(0,0,0,0.205)
+    )
+    ,url("../media/scroll3.jpg");
+}
+
+.catalogoCarousel:nth-child(12){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.205),
+        rgba(0,0,0,0.205)
+    )
+    ,url("../media/scroll4.jpg");
+}
+
+.catalogoCarousel:nth-child(13){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.205),
+        rgba(0,0,0,0.205)
+    )
+    ,url("../media/scroll5.jpg");
+}
+
+.catalogoCarousel:nth-child(14){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.205),
+        rgba(0,0,0,0.205)
+    )
+    ,url("../media/scroll6.jpg");
+}
+
+.catalogoCarousel:nth-child(15){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.205),
+        rgba(0,0,0,0.205)
+    )
+    ,url("../media/scroll7.jpg");
+}
+
+.catalogoCarousel:nth-child(16){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.205),
+        rgba(0,0,0,0.205)
+    )
+    ,url("../media/scroll8.jpg");
+}
+
+.sectionProd{
+    background-color: rgba(247, 188, 229, 0.116); 
+}
+
+.RowProd{
+    display: table;
+    width: 100%; 
+    table-layout: fixed; 
+    border-spacing: 10px; 
+    text-align: center;
+
+    div{
+    display: inline-block;
+    list-style-type: none;
+    vertical-align: top;
+    }
+
+    ul{
+        width: 345px;
+        text-align: start;
+        padding: 0;
+        }
+
+    li{
+        list-style-type: none;
+        display: flex;
+    }
+
+    img{
+    margin: 20px;
+    }
+
+    p{
+        color: #ffffff;
+    }
+}
+
+@media (min-width: 320px) {
+
+    #nuestros-box-nobanner .boxescarousel {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #RowProd {
+        display: flex;
+        justify-content: center;
+
+    div{
+        display: inline-block;
+        list-style-type: none;
+        vertical-align: top;
+    }
+
+    ul{
+    width: 345px;
+    text-align: start;
+    padding: 0;
+    }
+
+    li{
+        list-style-type: none;
+        display: flex;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    img{
+        margin: 20px;
+    }
+
+    }
+    }
+
+// PRODUCTOS END //
+
+// NOSOTROS START //
+
+#collapseBack{
+    background-color: #c2aabc; 
+}
+
+.gridContainer{
+
+    width: 90%;
+	max-width: 1000px;
+	margin: 0px auto;
+    padding: 150px 12px;
+    padding-bottom: 0;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(4, auto);
+
+	grid-template-areas: "header header header"
+						 "contenido contenido sidebar"
+						 "profesionales instalaciones sidebar"
+						 "footer footer footer";
+
+    .contactDiv{
+	grid-area: header;
+    text-align: center;
+    }
+
+    .RowUs{
+	grid-column: span 2;
+    display: flex;
+    }
+
+    .ColumnUsP {
+        grid-column: 3 / 4;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100px;
+        grid-area: sidebar;
+        font-family: $font-primary;
+        font-size: 1em;
+        margin: 0px 15px;
+        width: 4000px;
+    }
+
+    p{
+        margin: 0px;
+        text-align: initial;
+        padding: 10px 50px;
+        color: #000000;
+    }
+
+    .profesionales, .instalaciones {
+    background: #55a8fd;
+	color: #fff;
+	height: 100px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    height: 250px;
+    margin: 50px 0px;
+    }
+
+    .profesionales {
+        grid-area: profesionales;
+        background-image:linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.295),
+            rgba(0, 0, 0, 0.295) 
+        ), url("../media/macarons1.jpg");
+        background-size: cover;
+        background-position: center center;
+        border-radius: 10px;
+    }
+
+    .instalaciones {
+        @extend .profesionales;
+        grid-area:instalaciones;
+        background-image:linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.295),
+            rgba(0, 0, 0, 0.295) 
+        ), url("../media/macarons2.jpg");
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 920px) {
+
+    .gridContainer{ 
+    
+            .ColumnUsImg {
+            grid-column: 1 / 2;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100px;
+            grid-area: sidebar;
+            background-image:linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.13),
+                rgba(0, 0, 0, 0.089) 
+            ), url("../media/macarons6.jpg");
+            background-size: cover;
+            background-position: center center;
+            border-radius: 10px;
+            height: 370px;
+            width: 3000px;
+
+        }
+
+        p{
+            color: #000000;
+        }
+
+    }
+    
+}
+
+// NOSOTROS END //
+
+// CONTACTO START //
+
+#contact-nobanner{
+    text-align: center;
+    background-color: #c2aabc;
+    
+}
+
+#contact-nobanner .container {
+    padding: 120px 12px;
+    padding-bottom: 10px;
+}
+
+#contact-nobanner h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+#contact-nobanner p {
+    display: none;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+  color: #bbb5af;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+  color: #bbb5af;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+  color: #bbb5af;
+}
+
+input::-ms-placeholder, textarea::-ms-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
+  color: #bbb5af;
+}
+
+/* on hover placeholder */
+
+input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::placeholder, textarea:hover::placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::placeholder, textarea:hover:focus::placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::placeholder, textarea:hover::placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
+  color: #cbc6c1;
+}
+
+#form {
+  width: 500px;
+  margin: 50px auto 100px auto;
+}
+
+input {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  width: 405px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  
+  outline: none;
+  color: #ffffff;
+  
+  border: solid 2px #fbd6bb;
+  border-bottom: none;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+  background: #ffffff;
+  color: #e2dedb;
+}
+
+textarea {
+  width: 405px;
+  max-width: 470px;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+  
+  outline: none;
+  
+  color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  
+  border: solid 2px #fbd6bb;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+  background: #ffffff;
+  color: #e2dedb;
+}
+
+#submit {
+  padding: 0;
+  margin: -5px 0px 0px 0px;
+  
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  color: #b3aca7;
+  
+  outline:none;
+  cursor: pointer;
+  
+  border: solid 1px #fbd6bb;
+  border-top: none;
+}
+
+#submit:hover {
+  color: #ffffff;
+}
+
+#my-videoClass{
+    width: 50%;
+}
+
+@media (max-width: 720px) {
+    
+    .contact-nobanner{
+        text-align: center;
+    }
+    
+    #contact-nobanner .container {
+        padding: 120px 12px;
+        padding-bottom: 10px;
+    }
+    
+    #contact-nobanner h2 {
+        margin-top: 0;
+        text-align: center;
+    }
+    
+    #contact-nobanner p {
+        display: none;
+    }
+
+    #my-videoClass{
+        width: 80%;
+    }
+
+}
+
+// CONTACTO END //
